@@ -61,3 +61,4 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
     - Finally found a way to fetch data from database without errors. 
 - Creating Navbar
     - Used this as a refererence: [https://codewithmarish.com/post/how-to-create-responsive-navbar-in-next-js]
+- hello
