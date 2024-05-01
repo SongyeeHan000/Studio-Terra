@@ -1,9 +1,25 @@
+import Image from 'next/image'
+import ceramicItems from '../../public/ceramicItems.jpg'
+import Link from 'next/link'
 
 export default async function Home() {
 
   return (
     <div>
-      <h1>Home page</h1>
+      <Image 
+        src={ceramicItems}
+        alt='homepage'
+        className='backgroundPic'
+        layout='fill'
+      />
+      <div className='title'>
+        <h1>Studio Terra</h1>
+        <div className='homepageNavLinks'>
+          <Link href="/about">About</Link>
+          <Link href="/products">Products</Link>
+          <Link href="/contact">Contact</Link>
+        </div>
+      </div>
     </div>
   )
 }
