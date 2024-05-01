@@ -1,14 +1,5 @@
-// import Image from "next/image";
-
-export default function Home() {
-  return (
-    <main >
-      <h1>home</h1>
-      
-    </main>
-  );
-}
-
+// import prisma from '../lib/prisma';
+// import { GetStaticProps } from 'next';
 
 // export const getStaticProps: GetStaticProps = async () => {
 //     const feed = await prisma.post.findMany({
@@ -31,4 +22,4 @@ export default function Home() {
 //       revalidate: 3,
 //     };
 //   }
-
+  

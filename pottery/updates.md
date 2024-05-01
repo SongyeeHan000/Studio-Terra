@@ -4,6 +4,8 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
 
 ## Links:
 1) How to Build a Fullstack App with Next.js, Prisma, and Vercel Postgres [https://vercel.com/guides/nextjs-prisma-postgres]
+2) Oodles : [https://github.com/Oodles-App/Oodles-2.0/blob/main/pages/index.js]
+3) Discussion page:  [https://github.com/vercel/next.js/discussions/59373]
 
 ## Progress:
 ### 4/16 (Paired with Oliver to help set up)
@@ -47,3 +49,8 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
 
         In Conclusion: 
         Whenever any changes are made in schema.prisma file, I must use `npx prisma db push` to update both database schema and Prisma Schema. Not sure when I'll be using `npx prisma generate`. 
+
+### 4/18
+ - I was doing Step 5 of Link 1. I've ran into a problem with using 'getStaticProps' in pages.js It says that it's not supported in app. 
+
+ 
