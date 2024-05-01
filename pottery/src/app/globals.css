@@ -1,0 +1,9 @@
+/* NAVBAR */
+.navbar {
+    display: flex;
+    /* justify-content: space-between; */
+}
+.navLinks {
+    display: flex;
+    float: right;
+}
