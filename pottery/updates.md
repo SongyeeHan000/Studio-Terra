@@ -51,6 +51,10 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
         Whenever any changes are made in schema.prisma file, I must use `npx prisma db push` to update both database schema and Prisma Schema. Not sure when I'll be using `npx prisma generate`. 
 
 ### 4/18
- - I was doing Step 5 of Link 1. I've ran into a problem with using 'getStaticProps' in pages.js It says that it's not supported in app. 
+ - I was doing Step 5 of Link 1. I've ran into a problem with using 'getStaticProps' in pages.js It says that it's not supported in app. Couldn't find the answer after 3 hours of searching..
 
- 
+ ### 5/1
+- Reviewed what the error from the last time I touched this project. 
+- Tried other fetching method like `getServerProps` and `fetch('/')`, but also got an error saying that it's not supported in the app or error. 
+- Researched on Prisma document ([https://www.prisma.io/docs/orm/overview/prisma-in-your-stack/rest]) and continued to search in this code to see examples of how they retreive data ([https://github.com/prisma/prisma-examples/blob/latest/javascript/rest-nextjs/src/app/page.jsx]). 
+- Finally found a way to fetch data from database without errors. 
