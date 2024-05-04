@@ -62,3 +62,11 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
 - Creating Navbar
     - Used this as a refererence: [https://codewithmarish.com/post/how-to-create-responsive-navbar-in-next-js]
 - Created a simple landing page
+
+
+### 5/3
+- Researching best way to organize between client and server components: [https://youtu.be/gLFT1wYd7G0?si=NlpCnGSG8U2k41JH]
+
+- Learned between client and server-side components and how they are used: [https://youtu.be/8pzIuLFuv6U?si=aepnP_-pKLCANcfB] 
+
+- Created dynamic route to a single product page. 

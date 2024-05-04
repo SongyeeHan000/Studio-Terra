@@ -10,7 +10,6 @@ export default async function Home() {
         src={ceramicItems}
         alt='homepage'
         className='backgroundPic'
-        // layout='fill'
         fill='true'
         priority='true'
       />
