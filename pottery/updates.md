@@ -70,3 +70,8 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
 - Learned between client and server-side components and how they are used: [https://youtu.be/8pzIuLFuv6U?si=aepnP_-pKLCANcfB] 
 
 - Created dynamic route to a single product page. 
+
+### 5/6
+- <Image /> is more secure than <img />. <Image /> would not allow me to use external sources unless I name each domain in next.config.mjs. 
+- Adjusted products page with CSS. (Still need to do pagination).
+- Adjsuted single prouduct page with CSS. (Still needs more work).

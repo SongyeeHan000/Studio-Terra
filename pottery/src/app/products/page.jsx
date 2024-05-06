@@ -17,11 +17,11 @@ export default async function AllPotteries() {
   const products = await getProducts()
 
   return (
-    <div>
+    <div className="productsPage">
       <NavBar/>
         <h1>Pottery page</h1>
         <p>All handmade just for you</p>
-        <>
+        <div className="products">
           {products.map((product) => {
             return (
               <Product 
@@ -30,7 +30,7 @@ export default async function AllPotteries() {
               />
             )
           })}
-        </>
+        </div>
     </div>
   )
 }
