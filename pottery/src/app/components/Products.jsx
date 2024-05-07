@@ -6,7 +6,7 @@ export default function Product ({product}) {
 
 
     return (
-        <div className='singleProduct'>
+        <div className='singleProductContainer'>
             <Link href={`/products/${product.id}`}>
                 <img 
                     src={product.image} 
@@ -17,7 +17,6 @@ export default function Product ({product}) {
                 <p>{product.title}</p>
                 <p>{price}</p>   
             </Link>
-         
         </div>
     )
 }

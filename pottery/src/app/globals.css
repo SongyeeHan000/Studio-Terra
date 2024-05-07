@@ -67,7 +67,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
 }
-.singleProduct {
+.singleProductContainer {
     margin: 10px;
 }
 
@@ -75,4 +75,9 @@ a {
 
 .singleProductPage {
     display: flex;
+    justify-content: center;
+    margin: 50px
+}
+.productData {
+    margin: 30px;
 }

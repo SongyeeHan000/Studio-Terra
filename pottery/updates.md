@@ -75,3 +75,6 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
 - <Image /> is more secure than <img />. <Image /> would not allow me to use external sources unless I name each domain in next.config.mjs. 
 - Adjusted products page with CSS. (Still need to do pagination).
 - Adjsuted single prouduct page with CSS. (Still needs more work).
+
+### 5/7
+- Handling decrements, increments, onChange on singleProducts page: [https://nextjs.org/learn/react-foundations/updating-state]
