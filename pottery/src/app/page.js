@@ -15,7 +15,7 @@ export default async function Home() {
         fill='true'
         priority='true'
       />
-      <NavBar />
+      {/* <NavBar /> */}
       <div className='title'>
         {/* <h1>Studio Terra</h1> */}
         <h5>Rooted in Tradition, Inspired by Innovation</h5>

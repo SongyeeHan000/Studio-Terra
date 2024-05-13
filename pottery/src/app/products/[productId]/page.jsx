@@ -12,7 +12,7 @@ export default async function SingleProductPage ({params}) {
 
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
             <div className="singleProductPage">
                 <div >
                     <img src={product.image} alt={product.title} width={500} height={500}/>
