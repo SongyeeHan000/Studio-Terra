@@ -28,9 +28,9 @@ export default function SingleProduct ({product}) {
     }, [count]);
       
     return (
-        <div className="productData">
+        <div id="productData">
                 <h1>{product.title}</h1>
-                <h3>{price}</h3>
+                <h3>${price} USD</h3>
                 <p>{product.description}</p>
                 <div>
                     <button onClick={handleDecrements}>-</button>

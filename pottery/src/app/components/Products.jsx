@@ -15,7 +15,7 @@ export default function Product ({product}) {
                     height={300}
                 />
                 <p>{product.title}</p>
-                <p>{price}</p>   
+                <p>${price} USD</p>   
             </Link>
         </div>
     )
