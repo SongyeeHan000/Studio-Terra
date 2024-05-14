@@ -21,7 +21,8 @@ export default function SingleProduct ({product}) {
         setCount(newCount)
     }
     function handleCart() {
-        console.log(count)
+        console.log(product, count)
+        localStorage.setItem(product.id, count)
     }
     useEffect(() => {
         console.log('Updated count:', count);

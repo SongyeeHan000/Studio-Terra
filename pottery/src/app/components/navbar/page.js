@@ -1,4 +1,6 @@
 import Link from 'next/link'
+// import cart from '../../../../public/cart.png'
+
 export default async function NavBar() {
 
     return (
@@ -11,6 +13,7 @@ export default async function NavBar() {
                     <Link href="/about">About</Link>
                     <Link href="/products">Products</Link>
                     <Link href="/contact">Contact</Link>
+                    <Link href="/cart">Cart</Link>
                 </div>
         
             </div>
