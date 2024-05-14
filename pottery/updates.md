@@ -75,3 +75,30 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
 - <Image /> is more secure than <img />. <Image /> would not allow me to use external sources unless I name each domain in next.config.mjs. 
 - Adjusted products page with CSS. (Still need to do pagination).
 - Adjsuted single prouduct page with CSS. (Still needs more work).
+
+### 5/7
+- Handling decrements, increments, onChange on singleProducts page: [https://nextjs.org/learn/react-foundations/updating-state]
+
+
+### 5/13 
+- Looking into Local Storage: [https://articles.wesionary.team/using-localstorage-with-next-js-a-beginners-guide-7fc4f8bfd9dc] 
+    - Built in Methods:
+        1) setItem(key, value)
+            - When using setItem, had to use product.id as 'key'
+        2) getItem (key)
+        3) removeItem (key)
+        4) clear()
+        5) key(index)
+        6) length()
+- Created About, Contact, and Cart route
+- Got rid of the Navbar in individual pages and added Navbar globally on layout.js page
+- Goal today is to be able to save items into local storage, and be able to list out all products in 'cart' page. 
+    - Currently able to save items to local storage
+##### Issues for today: 
+  1) Not being able to get product's data with prisma. 
+    -  I tried creating a new function in a new page in 'app/api/cart' that fetches a product with id as it's argument. 
+    - I also tried fetching the product's data in the useEffect.
+    These two different ways caused the same error: "Error: PrismaClient is unable to run in this browser environment, or has been bundled for the browser (running in `unknown`)." 
+  2) Not being able to render cart image on the Navbar. No error is shown; Icon does not appear.
+    - Tried different formats: jpg and png
+
