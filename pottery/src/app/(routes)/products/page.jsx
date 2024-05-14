@@ -1,6 +1,6 @@
-import prisma from "../../../lib/prisma"
-import NavBar from "../components/navbar/page"
-import Product from "../components/Products"
+import prisma from "../../../../lib/prisma"
+import NavBar from "../../components/navbar/page"
+import Product from "../../components/Products"
 
 async function getProducts() {
   try {
@@ -16,9 +16,7 @@ export default async function AllPotteries() {
 
   return (
     <div className="productsPage">
-      {/* <NavBar/> */}
-        {/* <h1>Pottery page</h1>
-        <p>All handmade just for you</p> */}
+      <h1>Products</h1>
         <div className="products">
           {products.map((product) => {
             return (
