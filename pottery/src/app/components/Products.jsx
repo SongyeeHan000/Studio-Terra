@@ -14,8 +14,11 @@ export default function Product ({product}) {
                     width={300}
                     height={300}
                 />
-                <p>{product.title}</p>
-                <p>${price} USD</p>   
+                <div>
+                    <p>{product.title}</p>
+                    <p>${price} USD</p>   
+                </div>
+              
             </Link>
         </div>
     )

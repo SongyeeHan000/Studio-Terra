@@ -16,7 +16,6 @@ export default async function AllPotteries() {
 
   return (
     <div className="productsPage">
-      <h1>Products</h1>
         <div className="products">
           {products.map((product) => {
             return (

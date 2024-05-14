@@ -11,13 +11,9 @@ export default async function SingleProductPage ({params}) {
     const price =(product.price/100).toFixed(2)
 
     return (
-        <div>
-            <div className="singleProductPage">
-                <div >
-                    <img src={product.image} alt={product.title} width={500} height={500}/>
-                </div>
-                <SingleProduct product={product}/>
-            </div>
+        <div className="singleProductPage">
+                <img src={product.image} alt={product.title} width={500} height={500}/>
+            <SingleProduct product={product}/>
         </div>
     )
 }
