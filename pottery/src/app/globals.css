@@ -103,3 +103,16 @@ a {
     text-align: left;
 } */
 
+/* CART */
+
+.cartPage {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    /* justify-self: center;
+    align-items: center; */
+}
