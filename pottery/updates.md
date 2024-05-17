@@ -102,3 +102,15 @@ Create an e-commerce for pottery with Next.js, Prisma, and Vercel.
   2) Not being able to render cart image on the Navbar. No error is shown; Icon does not appear.
     - Tried different formats: jpg and png
 
+### 5/17 
+Goal: Create the cart page that displays all the products saved in cart.
+- Created a function called "fetchLocalStorageProducts" that takes in an array of productIds, then used Prisma to search and return product's detail. 
+    - Problems: Tried different ways and aways ran into the issue about 'prismaClient is unable to run in this browser environment..." 
+    - Attempts: 
+        1) Tried to use in Client component (app/(routes)/cart/pages.jsx)
+            - Local storage is rendered in client server. I don't think it's possible to fetch local storage key,value pairs and send it to this page. 
+            - Tried writing another function above the default function in Cart.jsx, but still error.
+            - Used useEffect(), but cannot use prisma in app/components/Cart because it's client component. 
+            - Tried with getSideServerProps, but as we know, it's deprecated from App Routers.
+            - Tried "fetch('/api/getCart').then ... ", but error in useEffect. 
+    - Solution: used 'use server' on the top of the api/getCart page. 
