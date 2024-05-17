@@ -1,9 +1,9 @@
 'use client' 
 
 import { useEffect, useState } from 'react'
-import prisma from '../../../lib/prisma'
 import { fetchLocalStorageProducts } from '../api/getCart/route'
 import Checkout from './Checkout'
+import Link from 'next/link'
 
 export default function  CartItems() {
     const [cart, setCart] = useState([])
@@ -36,9 +36,21 @@ export default function  CartItems() {
         console.log("cart items", cart)
     }
     function clearCart() {
+        //probably give a warning. might need to create a new component for this
         if (localStorage.length !== 0) {
             localStorage.clear();
+            setTotal(0)
         }
+        window.location.reload();
+    }
+    if (cart.length === 0) {
+        return ( 
+            <div>
+                <h3>Cart is Empty.</h3>
+                <p>Shop here:<Link href='/products'>Products</Link> </p>
+
+            </div>
+        )
     }
   
     return (
