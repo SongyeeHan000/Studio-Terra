@@ -58,12 +58,17 @@ a {
     margin: 0;
 }
 /* Products */
-.productsPage h1, p { 
+.productsPage h1{ 
     text-align: center;
     margin: 5px;
     font-size: 20px;
 }
 
+.productsPage p {
+    text-align: center;
+    margin: 5px;
+    font-size: 20px;
+}
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -103,3 +108,17 @@ a {
     text-align: left;
 } */
 
+/* CART */
+
+.cartPage {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+.cartItem {
+    display: flex;
+    flex-direction: row;
+}
+/* .cartItem p {
+    float: left;
+} */

@@ -1,64 +1,85 @@
 'use client' 
 
-// import prisma from '../../../lib/prisma'
 import { useEffect, useState } from 'react'
-import {getProduct} from '../api/cart'
+import { fetchLocalStorageProducts } from '../api/getCart/route'
+import Checkout from './Checkout'
+import Link from 'next/link'
 
-export default  function  CartItems() {
+export default function  CartItems() {
     const [cart, setCart] = useState([])
+    const [total, setTotal] = useState(0)
 
-    // useEffect(()=> {
 
-    //     async function fetchItems () {
-    //         const currentCart = []
-    //         const itemId = Object.keys(localStorage)
-    //         console.log(itemId)
+    useEffect(() => {
+        const fetchProducts = async () => {
+          if (localStorage.length === 0) {
+            return;
+          }
+          const keys = Object.keys(localStorage);
+          const values = Object.values(localStorage)
+          const productIds = keys.map((key) => parseInt(key));
+          const numberOfProducts = values.map((num) => parseInt(num))
 
-    //         try {
-    //             for (let i = 0; i < itemId.length; i++) {
-    //                 const numberOfProducts = localStorage.getItem(itemId[i])
-    //                 const product = getProduct(itemId)
-    //                 console.log("product here", product)
-    //                 // const product = await prisma.pottery.findUnique({
-    //                 //     where: {
-    //                 //         id: parseInt(itemId[i])
-    //                 //     }
-    //                 // })
-    //                 // currentCart.push([product, numberOfProducts])
-    //                 // console.log("current product being pushed", currentCart)
-    //             }
-    //         } catch (e) {
-    //             console.log(`Error in fetching product's data`, e)
-    //         }
-
-    //     }
-    //     fetchItems()
-
-        
-        // const itemsId = Object.keys(localStorage)
-        // console.log("Items here", itemsId)
-        // for (let i = 0; i < itemsId.length; i++) {
-        //     const numberOfProducts = localStorage.getItem(itemsId[i])   
-        //     const product = await prisma.pottery.findUnique({
-        //         where: {
-        //             id: parseInt(itemsId[i])
-        //         }
-        //     })
-        //     console.log("product title", prodcut.title)
-        // }
-    // }, [])
+          try {
+            // Create a different name for "fetchLocalStorgaeProducts"
+            const fetchedProducts = await fetchLocalStorageProducts(productIds, numberOfProducts)
+            setCart(fetchedProducts[0])
+            setTotal((fetchedProducts[1]/100).toFixed(2))
+          } catch (error) {
+            console.error('Error fetching products:', error);
+          } 
+        };
+        fetchProducts()
+    },[])
+   
+    function checkingItemsInCart() {
+        console.log("cart items", cart)
+    }
     function clearCart() {
+        //probably give a warning. might need to create a new component for this
         if (localStorage.length !== 0) {
             localStorage.clear();
-    
+            setTotal(0)
         }
+        window.location.reload();
     }
+    if (cart.length === 0) {
+        return ( 
+            <div>
+                <h3>Cart is Empty.</h3>
+                <p>Shop here:<Link href='/products'>Products</Link> </p>
 
+            </div>
+        )
+    }
+  
     return (
-        <div>
-             <div>cart items here</div>
-             <button onClick={clearCart}>Clear Cart</button>
+        <div className='cartPage'>
+            <div className='cart'>
+                {cart.map((item,index) => {
+                    return (
+                        <div className='cartItem' key={item.id}>
+                            <img src={item.image} width={100} height={100} alt={item.title} />
+                            <div>
+                                <p>{item.title}</p>
+                                <p>${(item.price/100).toFixed(2)}</p>
+                                <div>
+                                    <button>-</button>
+                                        <input id='counter' value={localStorage[item.id]} type='number' />
+                                    <button>+</button>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
+                <button onClick={checkingItemsInCart}>Check if Items in Cart</button>
+                <button onClick={clearCart}>Clear Cart</button>
+
+                <p>Total: ${total}</p>
+                <button>Checkout</button>
+            </div>
         </div>
+        
        
     )
 }
