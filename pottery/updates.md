@@ -122,3 +122,6 @@ Goal: Create the cart page that displays all the products saved in cart.
     - Trouble: 
         - It does not automatically update when I add another item to cart. I need to refresh the page to see the updated number. 
         - Used window.location.reload() to refresh the page after pressing "add to cart" button, but I don't think this is long-term solution
+- Creating Contact form layout.
+    - Using this website as resource" [https://www.maisonclay.com/contact]
+    - Reference for later : [https://react.dev/reference/react-dom/components/form]

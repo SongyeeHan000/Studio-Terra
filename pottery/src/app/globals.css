@@ -129,3 +129,17 @@ a {
 /* .cartItem p {
     float: left;
 } */
+
+
+/* CONTACT */
+.contactFormPage {
+    display: flex;
+    margin: auto;
+}
+.contactFormInfo{
+    flex:1
+}
+.contactForm {
+    flex:1;
+    /* padding: 30px; */
+}
