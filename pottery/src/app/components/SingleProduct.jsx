@@ -28,6 +28,7 @@ export default function SingleProduct ({product}) {
         } else {
             localStorage.setItem(product.id, count)
         }
+        window.location.reload()
     }
     useEffect(() => {
         console.log('Updated count:', count);
