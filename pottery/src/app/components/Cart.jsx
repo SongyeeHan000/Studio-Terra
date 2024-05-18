@@ -9,7 +9,6 @@ export default function  CartItems() {
     const [cart, setCart] = useState([])
     const [total, setTotal] = useState(0)
 
-
     useEffect(() => {
         const fetchProducts = async () => {
           if (localStorage.length === 0) {
@@ -24,7 +23,7 @@ export default function  CartItems() {
             // Create a different name for "fetchLocalStorgaeProducts"
             const fetchedProducts = await fetchLocalStorageProducts(productIds, numberOfProducts)
             setCart(fetchedProducts[0])
-            setTotal((fetchedProducts[1]/100).toFixed(2))
+            setTotal((fetchedProducts[1]/100).toFixed(2))        
           } catch (error) {
             console.error('Error fetching products:', error);
           } 
@@ -52,7 +51,7 @@ export default function  CartItems() {
             </div>
         )
     }
-  
+
     return (
         <div className='cartPage'>
             <div className='cart'>
@@ -60,13 +59,14 @@ export default function  CartItems() {
                     return (
                         <div className='cartItem' key={item.id}>
                             <img src={item.image} width={100} height={100} alt={item.title} />
-                            <div>
+                            <div className='cartItemInfo'>
                                 <p>{item.title}</p>
                                 <p>${(item.price/100).toFixed(2)}</p>
+                                <p>Quantity: {localStorage[item.id]}</p>
                                 <div>
-                                    <button>-</button>
+                                    {/* <button>-</button>
                                         <input id='counter' value={localStorage[item.id]} type='number' />
-                                    <button>+</button>
+                                    <button>+</button> */}
                                 </div>
                             </div>
                         </div>
