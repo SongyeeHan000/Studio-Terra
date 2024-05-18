@@ -21,8 +21,13 @@ export default function SingleProduct ({product}) {
         setCount(newCount)
     }
     function handleCart() {
-        console.log(product, count)
-        localStorage.setItem(product.id, count)
+        if (localStorage.getItem(product.id)) {
+            let numberOfItems = parseInt(localStorage[product.id])
+            numberOfItems += count
+            localStorage.setItem(product.id, numberOfItems)
+        } else {
+            localStorage.setItem(product.id, count)
+        }
     }
     useEffect(() => {
         console.log('Updated count:', count);
