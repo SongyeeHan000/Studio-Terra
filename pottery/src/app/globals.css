@@ -112,13 +112,34 @@ a {
 
 .cartPage {
     display: flex;
-    /* flex-direction: column; */
+    padding: 30px;
     justify-content: center;
 }
 .cartItem {
     display: flex;
     flex-direction: row;
+    background-color: white;
+    padding: 5px;
+    border: 1px black solid;
+    margin: 5px;
+}
+.cartItemInfo {
+    padding: 5px;
 }
 /* .cartItem p {
     float: left;
 } */
+
+
+/* CONTACT */
+.contactFormPage {
+    display: flex;
+    margin: auto;
+}
+.contactFormInfo{
+    flex:1
+}
+.contactForm {
+    flex:1;
+    /* padding: 30px; */
+}
