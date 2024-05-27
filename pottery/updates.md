@@ -125,3 +125,11 @@ Goal: Create the cart page that displays all the products saved in cart.
 - Creating Contact form layout.
     - Using this website as resource" [https://www.maisonclay.com/contact]
     - Reference for later : [https://react.dev/reference/react-dom/components/form]
+
+### 5/27 
+- Updating Contact page:
+    - Created functions where it saves the value of each textbox in State while typing (onChange).
+        - Is there a way to create DRY? 
+    - Created a fuction that validates emails (searches if there's '@', the email service, and top-level domain)
+    - Created a 'submit' button, but does not submit yet. It only verifies that nothing is empty in the form. 
+        - Need to research how to use Mandril to automatically send email once 'submit' button is clicked. 
