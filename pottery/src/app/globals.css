@@ -135,6 +135,11 @@ a {
 .contactFormPage {
     display: flex;
     margin: auto;
+    background-color: white;
+    padding: 30px;
+    transform: translate(0, 50%); 
+    width: 50%;
+
 }
 .contactFormInfo{
     flex:1

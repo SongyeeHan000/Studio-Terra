@@ -133,3 +133,4 @@ Goal: Create the cart page that displays all the products saved in cart.
     - Created a fuction that validates emails (searches if there's '@', the email service, and top-level domain)
     - Created a 'submit' button, but does not submit yet. It only verifies that nothing is empty in the form. 
         - Need to research how to use Mandril to automatically send email once 'submit' button is clicked. 
+    - Updated CSS on contact page

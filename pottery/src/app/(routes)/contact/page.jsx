@@ -52,7 +52,7 @@ export default function Contact () {
     return (
         <div className="contactFormPage">
             <div className="contactFormInfo">
-                <h3>Contact Me</h3>
+                <h2>Contact Me</h2>
                 <p>If you cannot find the answer to your question
                     on the website or if your inquiry is very specific, 
                     feel free to contact us!
@@ -60,13 +60,13 @@ export default function Contact () {
             </div>
             <div className="contactForm">
                 <div>
-                    <p>Name (required)</p>
+                    {/* <p>Name (required)</p> */}
                     <label>First Name </label>
                     <input type="text" name="name" onChange={firstNameChange} id="firstName" required />
-                    <span>
-                        <label>Last Name </label>
-                        <input type="text" name="name" onChange={lastNameChange} id="lastName" required />
-                    </span>
+                </div>
+                <div> 
+                    <label>Last Name </label>
+                    <input type="text" name="name" onChange={lastNameChange} id="lastName" required />
                 </div>
                 <div>
                     <label>Email: </label>
