@@ -1,4 +1,5 @@
 'use client'
+import emailjs from "@emailjs/browser";
 import { useState } from "react"
 
  
@@ -30,7 +31,7 @@ export default function Contact () {
     function messageChange(e) {
         setMessage(e.target.value)
     }
-    function submit () {
+    function submit (e) {
         /*
         CHECK FOR REQUIREMENTS:
         - check if email has "@" and ".com" at the end. Idea: https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
@@ -40,14 +41,22 @@ export default function Contact () {
 
         */
         if (!validateEmail(email)) {
-            console.log("Error: email is not valid! ")
+            window.alert("Error: email is not valid! ")
         } else if (!firstName || !lastName || !subject || !message ) {
-            console.log('incomplete form!')
+            window.alert('Incomplete form!')
         } else {
-            console.log('SUBMITTING FORM', firstName, lastName, email, subject, message)
+            console.log('SUBMITTING FORM', firstName, lastName, email, subject, message, )
+            e.preventDefault();
+            emailjs.send('service_0bybodj', 'template_t30g3fk',{firstName, email, subject, message}, 'IjqTANhZ9dvUaJzdi')
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
         }
-    }
 
+
+    }
 
     return (
         <div className="contactFormPage">
@@ -58,7 +67,7 @@ export default function Contact () {
                     feel free to contact us!
                 </p>
             </div>
-            <div className="contactForm">
+            <div id="contact_form">
                 <div>
                     {/* <p>Name (required)</p> */}
                     <label>First Name </label>
