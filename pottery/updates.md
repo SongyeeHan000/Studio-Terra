@@ -143,3 +143,6 @@ Goal: Create the cart page that displays all the products saved in cart.
     - Added keys related to EmailJS on .env file, but isn't working when applied.
 ** Need to work on : ** 
     1. How to use keys from .env files in other pages. 
+
+### 8/4
+- Changing Project from pottery to coffee
