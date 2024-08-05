@@ -9,7 +9,7 @@ export async function fetchLocalStorageProducts(productIds, numberOfProduct){
     for (let i = 0; i < productIds.length; i++) {
         console.log("productId", numberOfProduct[i])
         try {
-            const product = await prisma.pottery.findUnique({
+            const product = await prisma.coffee.findUnique({
                 where: {
                     id: productIds[i]}
             })

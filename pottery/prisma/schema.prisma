@@ -16,9 +16,10 @@ model User {
   updatedAt     DateTime  @updatedAt @map(name: "updated_at")
 }
 
-model Pottery {
+model Coffee {
     id        Int      @id @default(autoincrement())
     title       String
+    brand       String
     price       Float 
     description String
     image       String

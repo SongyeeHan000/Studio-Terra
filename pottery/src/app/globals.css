@@ -11,19 +11,13 @@ header {
 .navbar {
     display: flex;
     padding: 5px 16px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: white;
 }
 .navbar a {
    margin: 20px;
 }
-/* a {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 30px;
-    color: #3C0600;
-} */
 
 /* 
 .navMenu {
@@ -42,17 +36,8 @@ header {
     transform: translate(-20%, -50%); 
     color: white;
     font-size: 50px;
-    /* ^ Center the text within the container  */
-    /* color: #3C0600; 
-    padding: 20px;
-    font-size: 50px;
-    text-align: center; */
     
 }
-/* .title h1 {
-    margin-bottom: 40px;
-    margin-top:40px
-} */
 .homepageNavLinks {
     display: flex;
     justify-content: space-between;
@@ -90,11 +75,10 @@ header {
     display: flex;
     justify-content: center;
     background-color: white;
-    width: 50%;
+    width: 70%;
     padding:50px;
     margin: auto;
-    border: 1px solid black;
-    margin-top: 5rem;
+
 }
 #productData {
     margin: 30px;
