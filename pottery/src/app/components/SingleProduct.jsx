@@ -1,46 +1,40 @@
 'use client' 
 
 import { useEffect, useState } from 'react'
-export default function SingleProductCard ({product}) {
-    let [quantity, setQuantity] = useState(0)
+export default function SingleProduct ({product}) {
+    let [count, setCount] = useState(0)
 
     const price = (product.price/100).toFixed(2)
 
     function handleIncrements() {
-        setQuantity(quantity => quantity + 1)
-        console.log("handling Increments:", quantity)
+        setCount(count => count + 1)
+        console.log(count)
     }
     function handleDecrements() {
-        if (quantity > 0){
-            setQuantity(quantity => quantity - 1)
-            console.log("handling decrements:", quantity)
+        if (count > 0){
+            setCount(count => count - 1)
         }
 
     }
-    function handleInputOnChange (e) {
-        const newValue = e.target.value
-        console.log(newValue)
-        if (!isNaN(newValue) && newValue !== '') {
-            setQuantity(parseInt(newValue,10))
-        } else {
-            setQuantity(0)
-        }
+    function handleChange(event){
+        const newCount = parseInt(event.target.value)
+        setCount(newCount)
     }
-
     function handleCart() {
-        console.log(quantity, product)
+        console.log(count, product)
         if (localStorage.getItem(product.id)) {
-            let numberOfItems = parseInt(localStorage.getItem(product.id),10)
-            numberOfItems += quantity
+            // console.log("entered", product.id, numberOfItems)
+            let numberOfItems = parseInt(localStorage[product.id])
+            numberOfItems += count
             localStorage.setItem(product.id, numberOfItems)
         } else {
-            localStorage.setItem(product.id, quantity)
+            localStorage.setItem(product.id, count)
         }
         window.location.reload()
     }
     useEffect(() => {
-        console.log('Updated quantity:', quantity);
-    }, [quantity]);
+        console.log('Updated count:', count);
+    }, [count]);
       
     return (
         <div id="productData">
@@ -49,7 +43,7 @@ export default function SingleProductCard ({product}) {
                 <p>{product.description}</p>
                 <div>
                     <button onClick={handleDecrements}>-</button>
-                        <input id='counter' type='number' min={0} value={quantity} onChange={handleInputOnChange}/>
+                        <input id='counter' type='number' min={0} value={count} onChange={handleChange} />
                     <button onClick={handleIncrements}>+</button>
                 </div>
                 <button onClick={handleCart}>Add to Cart</button>

@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 
-export default function ProductCard (props) {
-    const {product} = props
+export default function Product ({product}) {
     const price = (product.price/100).toFixed(2)
+
 
     return (
         <div className='singleProductContainer'>
