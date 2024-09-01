@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import cart from '../../../../public/cart.png'
 
 export default function NavBar() {
     const [cart, setCart] = useState(0)
