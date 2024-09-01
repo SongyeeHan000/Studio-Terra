@@ -23,7 +23,3 @@ export async function fetchLocalStorageProducts(productIds, numberOfProduct){
     return [products, total]
 }
 
-// export async function findingCartSubtotal (products) {
-//     let total = products
-//     for (let i = 0; i )
-// }

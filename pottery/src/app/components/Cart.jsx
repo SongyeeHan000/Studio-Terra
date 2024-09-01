@@ -1,7 +1,7 @@
 'use client' 
 
 import { useEffect, useState } from 'react'
-import { fetchLocalStorageProducts } from '../api/getCart/route'
+import { fetchLocalStorageProducts } from '../api/cart/route'
 import Checkout from './Checkout'
 import Link from 'next/link'
 

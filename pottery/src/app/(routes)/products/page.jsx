@@ -1,17 +1,9 @@
-import prisma from "../../../../lib/prisma"
 import NavBar from "../../components/navbar/page"
-import Product from "../../components/Products"
+import ProductCard from "../../components/Products"
+import { getProducts } from "@/app/api/products/page"
 
-async function getProducts() {
-  try {
-    const products = await prisma.coffee.findMany({})
-    return products
-  } catch (e) {
-    console.log("Cannot retrieve all products from Prisma.", e)
-  }
 
-}
-export default async function AllPotteries() {
+export default async function CoffeeBeansPage() {
   const products = await getProducts()
 
   return (
@@ -19,7 +11,7 @@ export default async function AllPotteries() {
         <div className="products">
           {products.map((product) => {
             return (
-              <Product 
+              <ProductCard
                 key={product.id}
                 product={product}
               />
