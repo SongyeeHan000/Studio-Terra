@@ -1,6 +1,6 @@
-import NavBar from "../../../components/navbar/page"
+import NavBar from "@/app/components/navbar/page"
 import SingleProductCard from '../../../components/SingleProduct'
-import { getSingleProduct } from "../../../api/products/page"
+import { getSingleProduct } from "@/app/api/products/page"
 
 export default async function SingleProductPage (props) {
     const params = props.params.productId

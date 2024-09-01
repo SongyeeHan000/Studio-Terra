@@ -1,6 +1,7 @@
 import NavBar from "../../components/navbar/page"
 import ProductCard from "../../components/Products"
-import { getProducts } from "../../api/prodcuts/page"
+import { getProducts } from "@/app/api/products/page"
+
 
 export default async function CoffeeBeansPage() {
   const products = await getProducts()

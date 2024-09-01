@@ -1,5 +1,5 @@
 
-import CartItems from '../../components/Cart'
+import CartItems from '@/app/components/Cart'
 
 export default async function Cart() {
 
