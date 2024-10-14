@@ -4,7 +4,7 @@ import Product from "../../components/Products"
 
 async function getProducts() {
   try {
-    const products = await prisma.pottery.findMany({})
+    const products = await prisma.pottery.findMany()
     return products
   } catch (e) {
     console.log("Cannot retrieve all products from Prisma.", e)
@@ -17,7 +17,7 @@ export default async function AllPotteries() {
   return (
     <div className="productsPage">
         <div className="products">
-          {products.map((product) => {
+          {products?.map((product) => {
             return (
               <Product 
                 key={product.id}
