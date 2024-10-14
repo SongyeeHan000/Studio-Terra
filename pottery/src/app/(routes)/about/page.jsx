@@ -2,7 +2,8 @@ export default function About(){
     return (
         <div>
             <h3>About The Daily Grind</h3>
-            <p>The Daily Grind is a coffee subscription service that brings you the world's finest coffee beans, roasted to perfection and delivered right to your doorstep. We believe that everyone deserves to enjoy a delicious cup of coffee every day, and we're committed to making that happen.</p>
+            <p>About page</p>
+            {/* <p>The Daily Grind is a coffee subscription service that brings you the world's finest coffee beans, roasted to perfection and delivered right to your doorstep. We believe that everyone deserves to enjoy a delicious cup of coffee every day, and we're committed to making that happen.</p>
             <h3>Our Mission</h3>
             <p>Our mission is to connect coffee lovers with the best roasters in the world and to provide them with a convenient and affordable way to enjoy their favorite coffee. We also believe in giving back to the coffee-growing communities and ensuring that our business practices are sustainable.</p>
 
@@ -17,7 +18,7 @@ export default function About(){
             <p>We're passionate about coffee: We're coffee lovers ourselves, and we're committed to providing you with the best possible coffee experience.
                 We're committed to customer satisfaction: We're always here to help you with any questions or concerns you have.
                 We're making a difference: We're committed to giving back to the coffee-growing communities and ensuring that our business practices are sustainable.
-                We hope you'll join us on our journey to discover the world's best coffee beans!</p>
+                We hope you'll join us on our journey to discover the world's best coffee beans!</p> */}
         </div>
     )
 }
