@@ -4,7 +4,7 @@ import Product from "../../components/Products"
 
 async function getProducts() {
   try {
-    const products = await prisma.coffee.findMany({})
+    const products = await prisma.pottery.findMany({})
     return products
   } catch (e) {
     console.log("Cannot retrieve all products from Prisma.", e)

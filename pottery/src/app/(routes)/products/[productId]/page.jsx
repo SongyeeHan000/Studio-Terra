@@ -3,7 +3,7 @@ import NavBar from "@/app/components/navbar/page"
 import SingleProduct from '../../../components/SingleProduct'
 
 export default async function SingleProductPage ({params}) {
-    const product = await prisma.coffee.findUnique({
+    const product = await prisma.pottery.findUnique({
         where: {
             id: parseInt(params.productId)
         }
