@@ -43,6 +43,7 @@ export default function  CartItems() {
         window.location.reload();
     }
     if (cart.length === 0) {
+        console.log(cart.length)
         return ( 
             <div>
                 <h3>Cart is Empty.</h3>

@@ -21,7 +21,9 @@ export default function SingleProduct ({product}) {
         setCount(newCount)
     }
     function handleCart() {
+        console.log(count, product)
         if (localStorage.getItem(product.id)) {
+            // console.log("entered", product.id, numberOfItems)
             let numberOfItems = parseInt(localStorage[product.id])
             numberOfItems += count
             localStorage.setItem(product.id, numberOfItems)
