@@ -1,10 +1,14 @@
+'use client'
 import Image from 'next/image'
 import butterDish from '../../public/butterSpread.jpeg' 
-import minimalistic from '../../public/minimalistic.jpg'
-import Link from 'next/link'
-import NavBar from './components/navbar/page'
+import { useRouter } from 'next/navigation'
 
 export default async function Home() {
+  const router = useRouter()
+  
+  async function onClick() {
+    router.push('/products')
+  }
 
   return (
     <div>
@@ -24,7 +28,7 @@ export default async function Home() {
         <h2>Modern Rustic Ceramics</h2>
         <p>Timeless Design, Handmade with Love.</p>
         <div className='buttonContainer'>
-           <button id="shopNowButton" >Shop Now</button>
+           <button id="shopNowButton" onClick={onClick} >Shop Now</button>
         </div>
       </div>
     </div>

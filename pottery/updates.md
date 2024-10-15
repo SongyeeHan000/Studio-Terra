@@ -153,3 +153,8 @@ Goal: Create the cart page that displays all the products saved in cart.
     1) Using a tag in ".md" file. Even though it was in .md file, it was reading as a HTML File. Therefore, leading to failed deployments. 
     2) Must be careful using appostrophes. I think it got caught in the "About" section and the error was complaining about the use of it until i commented it out. 
     3) Make sure the schema in "schema.prisma" has the same models as in prism and PostgreSQL in Vercel. My problem occurred because products cannot be read and could not map out the products. I had 2 potteries in the DB and showed in localhost prisma and in postgreSQL in vercel. However, schema.prisma was still called "coffee" model. Therefore, when the models were being created, pottery items could not be read even though it was in local prisma. 
+- Homepage Inspiration from 
+    1) https://studiolatitud.se/en
+    2) https://www.earthandelement.com/
+
+- Used this doc to use Google Font and make it accessible to every page: https://prismic.io/blog/nextjs-fonts
