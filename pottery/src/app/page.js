@@ -8,16 +8,24 @@ export default async function Home() {
 
   return (
     <div>
-      <Image 
-        src={butterDish}
-        alt='homepage'
-        className='backgroundPicture'
-        priority='true'
-        layout='responsive'
-        objectFit= 'cover'
-      />
+      <div className='imageContainer'>
+        <Image 
+          src={butterDish}
+          alt='homepage'
+          className='backgroundPicture'
+          priority='true'
+          layout='responsive'
+          objectFit= 'cover'
+        />
+
+
+      </div>
       <div className='title'>
-        
+        <h2>Modern Rustic Ceramics</h2>
+        <p>Timeless Design, Handmade with Love.</p>
+        <div className='buttonContainer'>
+           <button id="shopNowButton">Shop Now</button>
+        </div>
       </div>
     </div>
   )
