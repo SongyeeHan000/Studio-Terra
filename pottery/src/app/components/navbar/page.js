@@ -6,14 +6,14 @@ import { useEffect, useState } from 'react'
 export default function NavBar() {
     const [cart, setCart] = useState(0)
 
-    useEffect(() => {
-        const values = Object.values(localStorage) 
-        let total = 0
-        for (let i = 0; i < values.length; i++) {
-            total += parseInt(values[i])
-        }
-        setCart(total)
-    },[])
+    // useEffect(() => {
+    //     const values = Object.values(localStorage) 
+    //     let total = 0
+    //     for (let i = 0; i < values.length; i++) {
+    //         total += parseInt(values[i])
+    //     }
+    //     setCart(total)
+    // },[])
 
     return (
         <header>
@@ -22,12 +22,12 @@ export default function NavBar() {
                         <Link href="/about">About</Link>
                         <Link href="/products">Shop</Link>
                     </div>
-                    <div>
-                        <Link href="/">The Daily Grind</Link>
-                    </div>
+                        <div>
+                            <Link href="/">Studio Terra</Link>
+                        </div>
                     <div>
                         <Link href="/contact">Contact</Link>
-                        <Link href="/cart">Cart({cart})</Link>
+                        <Link href="/cart">Cart</Link>
                     </div>      
             </div>
         </header>

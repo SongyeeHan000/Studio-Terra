@@ -3,45 +3,46 @@ body {
 }
 /* NAVBAR */
 header {
-    position: sticky;
-    top: 0;
-    z-index:10;
+ 
 }
 
 .navbar {
     display: flex;
-    padding: 5px 16px;
+    padding: 2rem;
     justify-content: space-evenly;
     align-items: center;
     background-color: white;
+    position: sticky;
+    background-color: white;
+    position: fixed; /* Keeps it fixed at the top */
+    width: 100%; 
+    z-index: 100; /* Ensures it is above other elements */
 }
 .navbar a {
    margin: 20px;
 }
 
-/* 
-.navMenu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 16px;
-} */
+.backgroundPicture {
+    filter: brightness(0.9) contrast(0.7);
+    position: relative;
+    z-index: 1
+}
 
 /* Homepage */
 
 .title {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 15%;
     transform: translate(-20%, -50%); 
     color: white;
-    font-size: 50px;
+    font-size: 50px; */
     
 }
 .homepageNavLinks {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    margin: 0;
+    margin: 0; */
 }
 /* Products */
 .productsPage h1{ 
