@@ -24,7 +24,7 @@ export default async function Home() {
         <h2>Modern Rustic Ceramics</h2>
         <p>Timeless Design, Handmade with Love.</p>
         <div className='buttonContainer'>
-           <button id="shopNowButton">Shop Now</button>
+           <button id="shopNowButton" >Shop Now</button>
         </div>
       </div>
     </div>
