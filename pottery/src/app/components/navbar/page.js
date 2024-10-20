@@ -16,7 +16,7 @@ export default function NavBar() {
     // },[])
 
     return (
-        <header>
+        <div>
             <div className="navbar">
                     <div>
                         <Link href="/about">About</Link>
@@ -30,7 +30,7 @@ export default function NavBar() {
                         <Link href="/cart">Cart</Link>
                     </div>      
             </div>
-        </header>
+        </div>
       
     )
   }
