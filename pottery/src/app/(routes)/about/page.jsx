@@ -6,14 +6,17 @@ export default function About(){
         <div className="aboutPage">
             <h3>About Studio Terra</h3>
             <div id="aboutInfo">
-                <Image 
-                    src={potteryMaking}
-                    alt='potteryMaking'
-                    className='aboutPicture'
-                    priority='true'
-                    layout='responsive'
-                    objectFit= 'cover'
-                />
+                <div className='aboutImageContainer'>
+                    <Image 
+                        src={potteryMaking}
+                        alt='potteryMaking'
+                        className='aboutPicture'
+                        priority='true'
+                        layout='responsive'
+                        objectFit= 'cover'
+                    />
+                </div>
+               
                 <p>
                 {`Welcome to Studio Terra, where simplicity and nature converge in beautifully crafted pottery. Specializing in earthy, minimalistic designs, we create mugs, plates, and other functional pieces that bring a touch of elegance to your everyday life.
                     At Studio Terra, we are inspired by the raw beauty of the earth. Each piece is thoughtfully designed and handcrafted, reflecting the textures and colors of natural materials. Our collection focuses on simplicity and functionality, making every item not just a piece of art, but a practical addition to your home.
