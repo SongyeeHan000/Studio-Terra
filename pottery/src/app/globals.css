@@ -88,17 +88,25 @@ header {
  }
 
 /* Products */
-
- .productsPage {
-    display: flex;
-    position: relative;
-    top: 150px;
+.productsPage h3 {
     text-align: center;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+}
 
- }
+.productsPage p {
+    text-align: center;
+}
+
+ .productCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* Default direction is row, so this can be omitted if desired */
+    gap: 16px; /* Optional: Add spacing between items */
+    margin: 0rem 10rem;
+    justify-content: center; /* Optional: Align items horizontally */
+  }
+  
+
+
 
 /* Single Product Page */
 
@@ -115,14 +123,30 @@ header {
     margin: 30px;
     text-align: left;
 }
+.addToCartButton {
+    width: 40%;
+    padding: 10px;
+    background-color: white;
+    border: black 1px solid;
+}
+.counterContainer {
+    width: 30%;
+}
+.buttonContainer{
+    display: flex;
+    border:1px solid black
+}
+.buttonContainer button, input {
+    border: transparent;
+    background-color: white;
+    width: 100%;
+}
 #counter {
     width: 30px;
     text-align: center;
 }
 
-/* #productData p {
-    text-align: left;
-} */
+
 
 /* CART */
 
