@@ -27,7 +27,7 @@ export default async function Home() {
       <div className='title'>
         <h2>Modern Rustic Ceramics</h2>
         <p>Timeless Design, Handmade with Love.</p>
-        <div className='buttonContainer'>
+        <div className='shopNowButtonContainer'>
            <button id="shopNowButton" onClick={onClick} >Shop Now</button>
         </div>
       </div>

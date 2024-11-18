@@ -46,7 +46,7 @@ header {
     transform: translate(-50%, -50%); /* Adjust to center the image */
 }
 
-.buttonContainer {
+.shopNowButtonContainer {
     display: flex;
     justify-content: center;
     
