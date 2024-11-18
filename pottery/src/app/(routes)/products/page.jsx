@@ -1,3 +1,4 @@
+
 import prisma from "../../../../lib/prisma"
 import Product from "../../components/Products"
 
@@ -12,9 +13,12 @@ export async function getProducts() {
 }
 export default async function AllPotteries() {
   const products = await getProducts()
+ 
 
   return (
     <div className="productsPage">
+      <h3>Products</h3>
+        <p>Sort by: Price, low to high</p>
         <div className="productCard">
           {products.map((product) => {
             return (
