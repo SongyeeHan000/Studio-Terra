@@ -174,17 +174,28 @@ header {
 /* CONTACT */
 .contactFormPage {
     display: flex;
-    margin: auto;
-    background-color: white;
-    padding: 30px;
-    transform: translate(0, 50%); 
-    width: 50%;
+    background-color: #D3CAD0;
+    padding: 100px;
+    transform: translate(0px, 100px);
 
 }
 .contactFormInfo{
-    flex:1
+    flex:1; 
+    text-align: center;
 }
-.contactForm {
+#contact_form {
     flex:1;
-    /* padding: 30px; */
+    text-align-last: right;
+}
+
+.textInput {
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 60%;
+  
+}
+.submitButton {
+    width: auto;
+    border: 1px black solid;
+    margin: 3px;
 }

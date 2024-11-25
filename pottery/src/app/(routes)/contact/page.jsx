@@ -71,26 +71,26 @@ export default function Contact () {
                 <div>
                     {/* <p>Name (required)</p> */}
                     <label>First Name </label>
-                    <input type="text" name="name" onChange={firstNameChange} id="firstName" required />
+                    <input className="textInput" type="text" name="name" onChange={firstNameChange} id="firstName" required />
                 </div>
                 <div> 
                     <label>Last Name </label>
-                    <input type="text" name="name" onChange={lastNameChange} id="lastName" required />
+                    <input className="textInput" type="text" name="name" onChange={lastNameChange} id="lastName" required />
                 </div>
                 <div>
                     <label>Email: </label>
-                    <input type="email" name="email" onChange={emailChange} id="email" required />
+                    <input className="textInput" type="email" name="email" onChange={emailChange} id="email" required />
                 </div>
                 <div>
                     <label >Subject: </label>
-                    <input type="" name="subject" id="subject" onChange={subjectChange} required />
+                    <input className="textInput" type="" name="subject" id="subject" onChange={subjectChange} required />
                 </div>
                 <div>
                     <label>Message: </label>
-                    <input type="textbox" name="message" id="message" onChange={messageChange} required />
+                    <input className="textInput" type="textbox" name="message" id="message" onChange={messageChange} required />
                 </div>
                 <div>
-                    <input type="submit" onClick={submit}value="Submit" />
+                    <input className="submitButton" type="submit" onClick={submit}value="Submit" />
                 </div>
             </div>
 
