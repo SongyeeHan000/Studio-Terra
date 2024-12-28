@@ -122,6 +122,7 @@ header {
 #productData {
     margin: 30px;
     text-align: left;
+    width: 30%;
 }
 .addToCartButton {
     width: 40%;
