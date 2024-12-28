@@ -167,10 +167,27 @@ header {
 .cartItemInfo {
     padding: 5px;
 }
-/* .cartItem p {
-    float: left;
-} */
 
+.counter {
+    display: flex;
+    border: black solid 1px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100px
+
+
+}
+
+.counter button{
+    background-color: transparent;
+    border: none;
+    width: 33%;
+}
+#value {
+    padding: 0px 10px;
+    text-align: center;
+}
 
 /* CONTACT */
 .contactFormPage {

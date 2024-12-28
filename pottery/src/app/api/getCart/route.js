@@ -4,12 +4,6 @@ import prisma from '../../../../lib/prisma'
 import { NextResponse } from "next/server";
 
 
-// // export async function findingCartSubtotal (products) {
-// //     let total = products
-// //     for (let i = 0; i )
-// // }
-
-
 export async function fetchLocalStorageProducts(cartData) {
     // cartData is now a plain object
     const products = []; // Process cartData to fetch products
