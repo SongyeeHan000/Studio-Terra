@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-// import cart from '../../../../public/cart.png'
+import cart from '../../../../public/cart.png'
 
 export default function NavBar() {
     const [cart, setCart] = useState(0)
@@ -10,7 +10,10 @@ export default function NavBar() {
         const values = Object.values(localStorage) 
         let total = 0
         for (let i = 0; i < values.length; i++) {
-            total += parseInt(values[i])
+            const value = parseInt(values[i])
+            if (!isNaN(value)) {
+                total += value
+            }
         }
         setCart(total)
     },[])
@@ -27,7 +30,9 @@ export default function NavBar() {
                         </div>
                     <div>
                         <Link href="/contact">Contact</Link>
-                        <Link href="/cart">Cart ({cart})</Link>
+                        {cart > 0 ? (<Link href="/cart">Cart ({cart})</Link>) : 
+                            (<Link href="/cart">Cart</Link>)
+            }   
                     </div>      
             </div>
         </div>
