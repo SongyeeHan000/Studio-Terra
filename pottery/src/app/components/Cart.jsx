@@ -34,6 +34,13 @@ export default function CartItems() {
         fetchProducts();
     }, []);
 
+    function clearCartHandle() {
+        localStorage.clear();
+        setCart([]);
+        setTotal(0);
+        location.reload();
+    }
+
     if (cart.length === 0) {
         return (
             <div>
@@ -65,6 +72,7 @@ export default function CartItems() {
                 ))}
                 <p>Total: ${total}</p>
                 <button>Checkout</button>
+                <button onClick={clearCartHandle}>Clear Cart</button>
             </div>
         </div>
     );
