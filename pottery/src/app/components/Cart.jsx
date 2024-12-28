@@ -40,6 +40,22 @@ export default function CartItems() {
         setTotal(0);
         location.reload();
     }
+    function increaseValue(id) {
+        console.log("increasing value", id)
+        const value = localStorage[id]
+        if (value) {
+            localStorage.setItem(id, parseInt(value) + 1)
+            location.reload()   
+        }
+
+    }
+    function decreaseValue(id){
+        const value = localStorage[id]  
+        if (value > 0) {
+            localStorage.setItem(id, value - 1)
+            location.reload()
+        }
+    }
 
     if (cart.length === 0) {
         return (
@@ -62,10 +78,11 @@ export default function CartItems() {
                             <p>{item.title}</p>
                             <p>${(item.price / 100).toFixed(2)}</p>
                             <p>Quantity: {localStorage[item.id]}</p>
-                            <div>
-                                <button>-</button>
-                                <input id="counter" value={localStorage[item.id]} type="number" />
-                                <button>+</button>
+                            <div className="counter">
+                                <button onClick={() => decreaseValue(item.id)}>-</button>
+                             
+                                <span id="value">{localStorage[item.id]}</span>
+                                <button onClick={() => increaseValue(item.id)}>+</button>
                             </div>
                         </div>
                     </div>

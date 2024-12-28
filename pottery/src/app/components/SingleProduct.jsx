@@ -42,13 +42,11 @@ export default function SingleProduct ({product}) {
             <p>{product.description}</p>
             <p>${price} USD</p>
             <p>Quantity:</p>
-            <div className='counterContainer'>
-                <div className='buttonContainer'>
-                    <button onClick={handleDecrements}>-</button>
-                        <input id='counter' type='number' min={0} value={count} onChange={handleChange} />
-                    <button onClick={handleIncrements}>+</button>
-                </div>
-            </div>
+            <div className="counter">
+                                <button onClick={handleDecrements}>-</button>
+                                <span id="value">{count}</span>
+                                <button onClick={handleIncrements}>+</button>
+                            </div>
             <br/>
             <button className="addToCartButton" onClick={handleCart}>Add to Cart</button>
         </div>
